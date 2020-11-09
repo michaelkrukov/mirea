@@ -1,0 +1,69 @@
+package mirea.pois.mkryukov;
+dialect  "java"
+global Double baseTariff
+
+rule "calculate regional multiplier"
+    when
+        $CarInsurance: CarInsurance(car.getOwner().getRegionNumber() >= 0)
+    then
+        $CarInsurance.addMultiplier(getRegionalMultiplier($CarInsurance.getCar().getOwner().getRegionNumber()));
+end
+
+rule "calculate age-exp multiplier"
+    when
+        $CarInsurance: CarInsurance(car.getOwner().getAge() >= 18, car.getOwner().getExperience() >= 0)
+    then
+        $CarInsurance.addMultiplier(getAgeExpMultiplier(
+            $CarInsurance.getCar().getOwner().getAge(),
+            $CarInsurance.getCar().getOwner().getExperience()
+        ));
+end
+
+rule "calculate ko multiplier"
+    when
+        $CarInsurance: CarInsurance(car.getOwnersMax() > 0)
+    then
+        $CarInsurance.addMultiplier(getKOMultiplier($CarInsurance.getCar().getOwnersMax()));
+end
+
+rule "calculate bonus malus"
+    when
+        $CarInsurance: CarInsurance(car.getOwner() != null)
+    then
+        $CarInsurance.addMultiplier($CarInsurance.getCar().getOwner().getBonusMalus());
+end
+
+rule "calculate insurance"
+    when
+        $CarInsurance: CarInsurance()
+    then
+        if ($CarInsurance.areMultipliersAvailable()){
+            $CarInsurance.calculatePrice();
+            System.out.println("Финальная цена страхования составляет: " + $CarInsurance.getFinalPrice());
+        } else {
+            System.out.println("Отсутствуют коэффициенты для рассчёта");
+        }
+end
+
+function Double getKOMultiplier(Integer ownersMax) {
+    return ownersMax > 1 ? 2.0 : 1.0;
+}
+
+function Double getAgeExpMultiplier(Integer age, Integer exp){
+    if (exp <= 3) {
+        return (age <= 22 ? 1.8 : 1.7);
+    } else {
+        return (age <= 22 ? 1.6 : 1);
+    }
+}
+
+function Double getRegionalMultiplier(Integer region){
+    switch (region) {
+        case 99:
+            return 2.0;
+        case 50:
+            return 1.5;
+        default:
+            return 1.0;
+    }
+}

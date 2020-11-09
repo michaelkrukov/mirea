@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="kMeans">
+<entry key="dimensions" type="xint" value="13"/>
+<entry key="ignoredColumns" type="xint" value="8"/>
+<config key="clusterCoverage">
+<entry key="array-size" type="xint" value="8"/>
+<entry key="0" type="xint" value="18750"/>
+<entry key="1" type="xint" value="16672"/>
+<entry key="2" type="xint" value="19511"/>
+<entry key="3" type="xint" value="19849"/>
+<entry key="4" type="xint" value="18766"/>
+<entry key="5" type="xint" value="22858"/>
+<entry key="6" type="xint" value="17347"/>
+<entry key="7" type="xint" value="16747"/>
+</config>
+<config key="kMeansCluster0">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xdouble" value="1341.8531733333334"/>
+<entry key="1" type="xdouble" value="7.505386666666666"/>
+<entry key="2" type="xdouble" value="3.0194133333333335"/>
+<entry key="3" type="xdouble" value="3.66128"/>
+<entry key="4" type="xdouble" value="0.7653866666666667"/>
+</config>
+<config key="kMeansCluster1">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xdouble" value="218.1994961612284"/>
+<entry key="1" type="xdouble" value="7.06897792706334"/>
+<entry key="2" type="xdouble" value="2.9592130518234163"/>
+<entry key="3" type="xdouble" value="3.8362523992322455"/>
+<entry key="4" type="xdouble" value="0.8188579654510557"/>
+</config>
+<config key="kMeansCluster2">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xdouble" value="339.1177797140075"/>
+<entry key="1" type="xdouble" value="7.039054892112142"/>
+<entry key="2" type="xdouble" value="2.9509507457331763"/>
+<entry key="3" type="xdouble" value="3.827635692686177"/>
+<entry key="4" type="xdouble" value="0.8085182717441444"/>
+</config>
+<config key="kMeansCluster3">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xdouble" value="604.0946143382538"/>
+<entry key="1" type="xdouble" value="6.702302382991586"/>
+<entry key="2" type="xdouble" value="2.9812585016877424"/>
+<entry key="3" type="xdouble" value="3.8653332661595043"/>
+<entry key="4" type="xdouble" value="0.8000906846692528"/>
+</config>
+<config key="kMeansCluster4">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xdouble" value="461.6557071299158"/>
+<entry key="1" type="xdouble" value="6.915805179580092"/>
+<entry key="2" type="xdouble" value="2.9532665458808482"/>
+<entry key="3" type="xdouble" value="3.8398699776190983"/>
+<entry key="4" type="xdouble" value="0.7664925929873175"/>
+</config>
+<config key="kMeansCluster5">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xdouble" value="772.4288651675562"/>
+<entry key="1" type="xdouble" value="6.93109633388748"/>
+<entry key="2" type="xdouble" value="2.9510455857905327"/>
+<entry key="3" type="xdouble" value="3.937352349286902"/>
+<entry key="4" type="xdouble" value="0.8459182780645725"/>
+</config>
+<config key="kMeansCluster6">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xdouble" value="983.3808151265348"/>
+<entry key="1" type="xdouble" value="7.695566956822505"/>
+<entry key="2" type="xdouble" value="2.9283449587824983"/>
+<entry key="3" type="xdouble" value="3.6827693549316884"/>
+<entry key="4" type="xdouble" value="0.8064218596875541"/>
+</config>
+<config key="kMeansCluster7">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xdouble" value="82.88559144921479"/>
+<entry key="1" type="xdouble" value="7.260225712067833"/>
+<entry key="2" type="xdouble" value="2.866483549292411"/>
+<entry key="3" type="xdouble" value="3.741505941362632"/>
+<entry key="4" type="xdouble" value="0.7744073565414701"/>
+</config>
+<config key="FeatureNames">
+<entry key="array-size" type="xint" value="13"/>
+<entry key="0" type="xstring" value="Minutes"/>
+<entry key="1" type="xstring" value="Category (to number)"/>
+<entry key="2" type="xstring" value="DayOfWeek (to number)"/>
+<entry key="3" type="xstring" value="PdDistrict (to number)"/>
+<entry key="4" type="xstring" value="Resolution (to number)"/>
+<entry key="5" type="xstring" isnull="true" value=""/>
+<entry key="6" type="xstring" isnull="true" value=""/>
+<entry key="7" type="xstring" isnull="true" value=""/>
+<entry key="8" type="xstring" isnull="true" value=""/>
+<entry key="9" type="xstring" isnull="true" value=""/>
+<entry key="10" type="xstring" isnull="true" value=""/>
+<entry key="11" type="xstring" isnull="true" value=""/>
+<entry key="12" type="xstring" isnull="true" value=""/>
+</config>
+</config>
